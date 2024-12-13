@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Attempting to access a non-existent property of a null object
+    let myElement = document.getElementById('myDiv');
+    let nonExistentProperty = myElement.nonExistentProperty;
+    console.log(nonExistentProperty);
+  </script>
+</body>
+</html>
