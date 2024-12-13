@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    let myElement = document.getElementById('myDiv');
+    if (myElement !== null) {
+        // Check if property exists
+        if(myElement.hasOwnProperty('nonExistentProperty')){
+            let nonExistentProperty = myElement.nonExistentProperty;
+            console.log(nonExistentProperty);
+        } else {
+            console.log("Property does not exist!");
+        }
+    } else {
+      console.log("Element not found!");
+    }
+  </script>
+</body>
+</html>
